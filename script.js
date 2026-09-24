@@ -5,11 +5,17 @@ const sections = document.querySelectorAll('main section[id]');
 const topbar = document.querySelector('.topbar');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
+const progressBar = document.querySelector('.scroll-progress');
 
 function setActiveNavLink(targetId) {
   navLinks.forEach((link) => {
     const isActive = link.getAttribute('href') === `#${targetId}`;
     link.classList.toggle('is-active', isActive);
+    if (isActive) {
+      link.setAttribute('aria-current', 'true');
+    } else {
+      link.removeAttribute('aria-current');
+    }
   });
 }
 
@@ -29,6 +35,18 @@ function updateActiveNavLink() {
   });
 
   setActiveNavLink(activeSectionId);
+}
+
+function updateScrollProgress() {
+  if (progressBar) {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+    progressBar.style.width = `${Math.min(ratio * 100, 100)}%`;
+  }
+
+  if (topbar) {
+    topbar.classList.toggle('is-scrolled', window.scrollY > 12);
+  }
 }
 
 if (yearElement) {
@@ -65,25 +83,37 @@ if (menuToggle && nav) {
     menuToggle.setAttribute('aria-expanded', String(isOpen));
     menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
   });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || !nav.classList.contains('is-open')) {
+      return;
+    }
+    nav.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Abrir menu');
+    menuToggle.focus();
+  });
 }
 
-if (sections.length > 0) {
-  let rafId = 0;
+let scrollRafId = 0;
 
-  const handleScrollSpy = () => {
-    window.cancelAnimationFrame(rafId);
-    rafId = window.requestAnimationFrame(updateActiveNavLink);
-  };
+const handleScroll = () => {
+  window.cancelAnimationFrame(scrollRafId);
+  scrollRafId = window.requestAnimationFrame(() => {
+    updateScrollProgress();
+    updateActiveNavLink();
+  });
+};
 
-  window.addEventListener('scroll', handleScrollSpy, { passive: true });
-  window.addEventListener('resize', handleScrollSpy);
+window.addEventListener('scroll', handleScroll, { passive: true });
+window.addEventListener('resize', handleScroll);
 
-  if (window.location.hash) {
-    setActiveNavLink(window.location.hash.slice(1));
-  }
-
-  updateActiveNavLink();
+if (window.location.hash) {
+  setActiveNavLink(window.location.hash.slice(1));
 }
+
+updateScrollProgress();
+updateActiveNavLink();
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(
@@ -96,7 +126,7 @@ if ('IntersectionObserver' in window) {
       });
     },
     {
-      threshold: 0.14,
+      threshold: 0.12,
     }
   );
 

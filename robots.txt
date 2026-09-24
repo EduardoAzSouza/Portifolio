@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eduardoazsouza.github.io/Portifolio/sitemap.xml

@@ -1,18 +1,62 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfólio profissional de Eduardo Souza, Engenheiro de Software focado em .NET, AWS, microserviços e produtos em tempo real." />
-  <title>Eduardo Souza | Portfólio</title>
+  <title>Eduardo Souza | Engenheiro de Software .NET</title>
+  <meta name="theme-color" content="#060a13" />
+  <link rel="canonical" href="https://eduardoazsouza.github.io/Portifolio/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://eduardoazsouza.github.io/Portifolio/" />
+  <meta property="og:title" content="Eduardo Souza | Engenheiro de Software .NET" />
+  <meta property="og:description" content="Engenheiro de Software .NET Pleno — arquitetura de microsserviços, integração de IA em tempo real e cloud (AWS, Docker, Kubernetes)." />
+  <meta property="og:image" content="https://eduardoazsouza.github.io/Portifolio/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Eduardo Souza | Engenheiro de Software .NET" />
+  <meta name="twitter:description" content="Engenheiro de Software .NET Pleno — microsserviços, IA em tempo real e cloud." />
+  <meta name="twitter:image" content="https://eduardoazsouza.github.io/Portifolio/images/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Eduardo Azeni de Souza",
+    "jobTitle": "Engenheiro de Software .NET",
+    "description": "Engenheiro de Software focado em .NET, arquitetura de microsserviços, integração de IA e cloud.",
+    "url": "https://eduardoazsouza.github.io/Portifolio/",
+    "image": "https://eduardoazsouza.github.io/Portifolio/images/retrato.png",
+    "email": "mailto:eduardosouza_araras@hotmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Araras",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "FHO - Fundação Hermínio Ometto"
+    },
+    "knowsAbout": ["C#", ".NET", "Microsserviços", "AWS", "Docker", "Kubernetes", "Azure DevOps", "Vue.js", "Laravel", "RabbitMQ", "PostgreSQL"],
+    "sameAs": [
+      "https://github.com/EduardoAzSouza",
+      "https://www.linkedin.com/in/eduardoazsouza/"
+    ]
+  }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1222'/%3E%3Ctext x='32' y='41' font-family='Arial, sans-serif' font-size='26' font-weight='bold' fill='%237ce0cd' text-anchor='middle'%3EES%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <div class="page-shell" id="top">
     <header class="topbar">
       <div class="topbar-inner">
@@ -27,17 +71,19 @@
           <a href="#apresentacao">Apresentação</a>
           <a href="#informacoes-tecnicas">Técnicas</a>
           <a href="#experiencia">Experiência</a>
-          <a href="#sistemas-web">Sistemas Web</a>
+          <a href="#projetos">Projetos</a>
           <a href="#formacao">Formação</a>
+          <a href="#contato">Contato</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="conteudo">
       <section class="hero reveal" id="apresentacao">
         <div class="hero-copy">
-          <p class="eyebrow">Apresentação</p>
-          <h1>Eduardo Souza</h1>
+          <span class="hero-badge"><span class="pulse-dot" aria-hidden="true"></span>Disponível para novos projetos</span>
+          <p class="eyebrow"><span class="eyebrow-num">01</span>Apresentação</p>
+          <h1>Eduardo <span class="gradient-text">Souza</span></h1>
           <h2>Engenheiro de Software .NET Pleno | Arquitetura de Microsserviços | Integração de IA & Cloud</h2>
           <p class="hero-text">
             Sou Engenheiro da Computação formado pela FHO e atuo como Desenvolvedor de Software com foco no ecossistema .NET. Minha base técnica foi construída a partir da engenharia, 
@@ -57,12 +103,15 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="Curriculo%20-%20Eduardo%20Azeni%20de%20Souza.pdf" target="_blank" rel="noreferrer">Ver currículo</a>
+            <a class="button primary" href="docs/Curriculo%20-%20Eduardo%20Azeni%20de%20Souza.pdf" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-file-arrow-down btn-icon" aria-hidden="true"></i>
+              Ver currículo
+            </a>
             <a class="button secondary linkedin" href="https://www.linkedin.com/in/eduardoazsouza/" target="_blank" rel="noreferrer">
               <i class="fa-brands fa-linkedin-in brand-icon" aria-hidden="true"></i>
               Ver perfil LinkedIn
             </a>
-            <a class="button ghost whatsapp" href="https://api.whatsapp.com/send/?phone=5519984397865&text=Ol%C3%A1%2C+gostaria+de+mais+informa%C3%A7%C3%B5es%21&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
+            <a class="button ghost whatsapp" href="https://wa.me/5519984397865?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20achei%20seu%20perfil%20bem%20interessante.%20Que%20tal%20conversarmos%3F" target="_blank" rel="noreferrer">
               <i class="fa-brands fa-whatsapp brand-icon" aria-hidden="true"></i>
               Contato
             </a>
@@ -86,7 +135,7 @@
 
         <aside class="hero-card">
           <div class="portrait-frame">
-            <img src="images/retrato.png" alt="Retrato de Eduardo Souza" />
+            <img src="images/retrato.webp" alt="Retrato de Eduardo Souza" width="800" height="600" fetchpriority="high" />
           </div>
           <p class="card-kicker">Resumo rápido</p>
           <ul class="profile-list">
@@ -96,19 +145,46 @@
             <li>LinkedIn: /eduardoazsouza</li>
           </ul>
           <div class="badge-grid">
-            <span>Microsserviços</span>
+            <span>C#</span>
+            <span>.NET Core</span>
+            <span>Entity Framework</span>
+            <span>Node.js</span>
+            <span>Laravel</span>
             <span>WebSockets</span>
+            <span>RESTful APIs</span>
+            <span>JWT</span>
+            <span>Keycloak</span>
+            <span>Microsserviços</span>
+            <span>LLMs</span>
+            <span>Vue.js</span>
+            <span>Nuxt</span>
+            <span>React</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>PostgreSQL</span>
+            <span>Redis</span>
+            <span>RabbitMQ</span>
+            <span>AWS</span>
             <span>Azure DevOps</span>
             <span>Docker</span>
-            <span>PostgreSQL</span>
+            <span>Kubernetes</span>
+            <span>Nginx</span>
+            <span>CI/CD</span>
+            <span>SonarQube</span>
+            <span>Testes unitários</span>
             <span>Clean Code</span>
+            <span>SOLID</span>
+            <span>Scrum</span>
+            <span>Kanban</span>
+            <span>Git</span>
           </div>
         </aside>
       </section>
 
       <section id="informacoes-tecnicas" class="section reveal">
         <div class="section-heading">
-          <p class="eyebrow">Informações Técnicas</p>
+          <p class="eyebrow"><span class="eyebrow-num">02</span>Informações Técnicas</p>
           <h3>Back-end, cloud e qualidade de entrega</h3>
         </div>
 
@@ -134,7 +210,7 @@
 
       <section id="experiencia" class="section reveal">
         <div class="section-heading">
-          <p class="eyebrow">Experiência</p>
+          <p class="eyebrow"><span class="eyebrow-num">03</span>Experiência</p>
           <h3>Trajetória profissional</h3>
         </div>
 
@@ -142,7 +218,7 @@
           <article class="timeline-item">
             <div class="timeline-top">
               <div class="company-mark">
-                <img src="images/logo-overdrive.png" alt="Logo da Overdrive Softwares e Consultoria" />
+                <img src="images/logo-overdrive.webp" alt="Logo da Overdrive Softwares e Consultoria" width="810" height="145" loading="lazy" />
               </div>
               <div class="timeline-branding">
                 <div class="timeline-meta">
@@ -151,8 +227,8 @@
                 </div>
                 <p class="timeline-project">Cliente / projeto: Cursale</p>
               </div>
-              <div class="project-mark">
-                <img src="images/logo-cursale.png" alt="Logo da Cursale" />
+              <div class="project-mark project-mark--dark">
+                <img src="images/logo-cursale.webp" alt="Logo da Cursale" width="564" height="144" loading="lazy" />
               </div>
             </div>
             <h4>Desenvolvedor Full Stack</h4>
@@ -172,14 +248,14 @@
               <span>LLMs</span>
             </div>
             <div class="timeline-visual">
-              <img src="images/cursale-front.png" alt="Screenshot da interface front-end da Cursale" />
+              <img src="images/cursale-front.webp" alt="Screenshot da interface front-end da Cursale" width="1440" height="683" loading="lazy" />
             </div>
           </article>
 
           <article class="timeline-item">
             <div class="timeline-top">
               <div class="company-mark">
-                <img src="images/logo-overdrive.png" alt="Logo da Overdrive Softwares e Consultoria" />
+                <img src="images/logo-overdrive.webp" alt="Logo da Overdrive Softwares e Consultoria" width="810" height="145" loading="lazy" />
               </div>
               <div class="timeline-branding">
                 <div class="timeline-meta">
@@ -189,7 +265,7 @@
                 <p class="timeline-project">Cliente / projeto: Sol Agora</p>
               </div>
               <div class="project-mark">
-                <img src="images/logo-sol-agora.png" alt="Logo da Sol Agora" />
+                <img src="images/logo-sol-agora.webp" alt="Logo da Sol Agora" width="208" height="56" loading="lazy" />
               </div>
             </div>
             <h4>Desenvolvedor Backend</h4>
@@ -205,17 +281,19 @@
               <span>Kubernetes</span>
               <span>RabbitMQ</span>
               <span>SonarQube</span>
-                <span>CI/CD</span>
-                <span>Testes unitários</span>
-                <span>Scrum</span>
-
+              <span>CI/CD</span>
+              <span>Testes unitários</span>
+              <span>Scrum</span>
+            </div>
+            <div class="timeline-visual">
+              <img src="images/sol-agora-backend-diagram.webp" alt="Diagrama da arquitetura de back-end da Sol Agora: fluxo do app e web para o BFF da fintech, APIs .NET Core REST, mensageria com RabbitMQ, mais de 40 microsserviços em pods Kubernetes e PostgreSQL via Entity Framework, com quality gates (SonarQube, testes unitários e code reviews), pipeline CI/CD do Azure DevOps com build, testes e deploy contínuo, e camada de infraestrutura em Docker e Kubernetes" width="1440" height="760" loading="lazy" />
             </div>
           </article>
 
           <article class="timeline-item">
             <div class="timeline-top">
               <div class="company-mark">
-                <img src="images/logo-overdrive.png" alt="Logo da Overdrive Softwares e Consultoria" />
+                <img src="images/logo-overdrive.webp" alt="Logo da Overdrive Softwares e Consultoria" width="810" height="145" loading="lazy" />
               </div>
               <div class="timeline-branding">
                 <div class="timeline-meta">
@@ -225,7 +303,7 @@
                 <p class="timeline-project">Cliente / projeto: Sol Agora</p>
               </div>
               <div class="project-mark">
-                <img src="images/logo-sol-agora.png" alt="Logo da Sol Agora" />
+                <img src="images/logo-sol-agora.webp" alt="Logo da Sol Agora" width="208" height="56" loading="lazy" />
               </div>
             </div>
             <h4>Estagiário Full Stack</h4>
@@ -248,63 +326,85 @@
               <span>Kanban</span>
             </div>
             <div class="timeline-visual">
-              <img src="images/sol-agora-front.png" alt="Screenshot da interface front-end da Sol Agora" />
+              <img src="images/sol-agora-front.webp" alt="Screenshot da interface front-end da Sol Agora" width="1440" height="683" loading="lazy" />
             </div>
           </article>
         </div>
       </section>
 
-      <section id="sistemas-web" class="section reveal">
+      <section id="projetos" class="section reveal">
         <div class="section-heading">
-          <p class="eyebrow">Sistemas Web</p>
-          <h3>Experiência aplicada em produto digital e front-end</h3>
+          <p class="eyebrow"><span class="eyebrow-num">04</span>Projetos em destaque</p>
+          <h3>Produtos reais, do back-end à experiência do usuário</h3>
         </div>
 
-        <div class="content-grid">
-          <p>
-            Meu foco principal está em back-end e sistemas web, mas minha atuação também passa pela camada de produto: interfaces,
-            integrações em tempo real, landing pages e experiências que conectam negócio, usuário e infraestrutura.
-          </p>
-          <p>
-            Os projetos Cursale e Sol Agora mostram bem esse recorte: construção de front-ends com Vue.js, extensões de navegador,
-            comunicações via WebSockets, API backend e deploy em ambientes cloud com foco em performance e estabilidade.
-          </p>
-        </div>
+        <p class="section-intro">
+          Dois produtos que mostram meu recorte de atuação: arquitetura de back-end, integrações em tempo real
+          e interfaces que conectam negócio, usuário e infraestrutura.
+        </p>
 
-        <div class="case-grid" style="margin-top: 18px;">
-          <article class="case-card">
-            <span class="case-tag">Real time</span>
-            <h4>Cursale</h4>
-            <p>Agente de IA com interface em Vue.js e integração via WebSockets para entregar insights instantâneos durante chamadas.</p>
-            <div class="badge-grid">
-              <span>Vue.js</span>
-              <span>WebSockets</span>
-              <span>Laravel</span>
-              <span>Node.js</span>
-              <span>AWS</span>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/sol-agora-front.webp" alt="Screenshot da interface front-end da Sol Agora" width="1440" height="683" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <span class="case-tag">Plataforma em produção</span>
+              <h4>Sol Agora</h4>
+              <p>
+                Ecossistema digital de energia solar sustentado por APIs, microsserviços .NET Core e operação
+                contínua em produção com Docker, Kubernetes e Azure DevOps.
+              </p>
+              <p class="project-role">
+                <strong>Meu papel:</strong> atuação no back-end — evolução de APIs, construção de BFF para fintech
+                e sustentação de microsserviços críticos para a operação.
+              </p>
+              <div class="badge-grid">
+                <span>.NET Core</span>
+                <span>Azure DevOps</span>
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>RabbitMQ</span>
+              </div>
+              <a class="button secondary project-link" href="https://solagora.com.br/" target="_blank" rel="noopener">
+                Visitar site ao vivo
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
             </div>
           </article>
-          <article class="case-card">
-            <span class="case-tag">Plataforma</span>
-            <h4>Sol Agora</h4>
-            <p>Ecossistema com APIs, microsserviços e operação em produção, sustentado por Docker, Kubernetes e Azure DevOps.</p>
-            <div class="badge-grid">
-              <span>.NET Core</span>
-              <span>Azure DevOps</span>
-              <span>Docker</span>
-              <span>Kubernetes</span>
-              <span>RabbitMQ</span>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/cursale-front.webp" alt="Screenshot da interface front-end da Cursale" width="1440" height="683" loading="lazy" />
             </div>
-          </article>
-          <article class="case-card">
-            <span class="case-tag">Base Full Stack</span>
-            <h4>Fundação técnica</h4>
-            <p>HTML, Git, C#/.NET e React formam a base que me permite atuar entre front-end, back-end e entrega de produto.</p>
-            <div class="badge-grid">
-              <span>HTML</span>
-              <span>Git</span>
-              <span>C#/.NET</span>
-              <span>React</span>
+            <div class="project-body">
+              <span class="case-tag">IA em tempo real</span>
+              <h4>Cursale</h4>
+              <p>
+                Agente de IA para assistência em tempo real durante chamadas comerciais, com interface em Nuxt/Vue.js
+                e comunicação via WebSockets para entregar insights instantâneos ao operador.
+              </p>
+              <p class="project-role">
+                <strong>Meu papel:</strong> responsável técnico pela arquitetura e implementação — interface em Nuxt,
+                integração em tempo real e infraestrutura na AWS. Produto descontinuado por decisão de negócio;
+                a vivência completa do ciclo de produto ficou.
+              </p>
+              <div class="badge-grid">
+                <span>Nuxt</span>
+                <span>Vue.js</span>
+                <span>WebSockets</span>
+                <span>Laravel</span>
+                <span>Node.js</span>
+                <span>AWS</span>
+              </div>
+              <div class="project-gallery">
+                <a class="gallery-item" href="images/cursale-capture-page.webp" target="_blank" rel="noopener" aria-label="Ampliar screenshot da tela de captura da Cursale">
+                  <img src="images/cursale-capture-page.webp" alt="Tela de captura da Cursale" width="1440" height="683" loading="lazy" />
+                </a>
+                <a class="gallery-item tall" href="images/cursale-full-screenshot.webp" target="_blank" rel="noopener" aria-label="Ampliar screenshot completo da página da Cursale">
+                  <img src="images/cursale-full-screenshot.webp" alt="Visão completa da página da Cursale" width="800" height="3910" loading="lazy" />
+                </a>
+              </div>
             </div>
           </article>
         </div>
@@ -314,7 +414,7 @@
 
       <section id="formacao" class="section reveal">
         <div class="section-heading">
-          <p class="eyebrow">Formação</p>
+          <p class="eyebrow"><span class="eyebrow-num">05</span>Formação</p>
           <h3>Base acadêmica, certificações e idiomas</h3>
         </div>
 
@@ -335,6 +435,28 @@
           </article>
         </div>
       </section>
+      <section id="contato" class="section contact-cta reveal">
+        <p class="eyebrow eyebrow-center"><span class="eyebrow-num">06</span>Contato</p>
+        <h3>Vamos construir algo juntos?</h3>
+        <p class="contact-text">
+          Estou aberto a novas oportunidades, projetos e parcerias. Escolha o canal que preferir —
+          respondo rapidamente e será um prazer conversar.
+        </p>
+        <div class="hero-actions contact-actions">
+          <a class="button primary" href="mailto:eduardosouza_araras@hotmail.com">
+            <i class="fa-solid fa-envelope btn-icon" aria-hidden="true"></i>
+            Enviar e-mail
+          </a>
+          <a class="button secondary whatsapp" href="https://wa.me/5519984397865?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20achei%20seu%20perfil%20bem%20interessante.%20Que%20tal%20conversarmos%3F" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-whatsapp brand-icon" aria-hidden="true"></i>
+            WhatsApp
+          </a>
+          <a class="button ghost" href="https://github.com/EduardoAzSouza" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-github btn-icon" aria-hidden="true"></i>
+            GitHub
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer class="footer reveal">
@@ -342,7 +464,7 @@
         <p class="footer-small">© <span id="year"></span> Eduardo Souza.</p>
 
           <div class="footer-actions" aria-label="Ações de contato">
-          <a class="footer-button whatsapp" href="https://api.whatsapp.com/send/?phone=5519984397865&text=Ol%C3%A1%2C+gostaria+de+mais+informa%C3%A7%C3%B5es%21&type=phone_number&app_absent=0" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp">
+          <a class="footer-button whatsapp" href="https://wa.me/5519984397865?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20achei%20seu%20perfil%20bem%20interessante.%20Que%20tal%20conversarmos%3F" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp">
             <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
             <span class="sr-only">WhatsApp</span>
           </a>
@@ -357,6 +479,10 @@
           <a class="footer-button" href="mailto:eduardosouza_araras@hotmail.com" target="_blank" rel="noreferrer" aria-label="Enviar e-mail">
             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
             <span class="sr-only">Email</span>
+          </a>
+          <a class="footer-button" href="#top" aria-label="Voltar ao topo">
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+            <span class="sr-only">Voltar ao topo</span>
           </a>
         </div>
       </div>
