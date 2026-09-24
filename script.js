@@ -6,6 +6,8 @@ const topbar = document.querySelector('.topbar');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 const progressBar = document.querySelector('.scroll-progress');
+const menuLabelOpen = menuToggle?.dataset.labelOpen || 'Abrir menu';
+const menuLabelClose = menuToggle?.dataset.labelClose || 'Fechar menu';
 
 function setActiveNavLink(targetId) {
   navLinks.forEach((link) => {
@@ -72,7 +74,7 @@ navLinks.forEach((link) => {
     if (menuToggle && nav && window.innerWidth <= 960) {
       nav.classList.remove('is-open');
       menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Abrir menu');
+      menuToggle.setAttribute('aria-label', menuLabelOpen);
     }
   });
 });
@@ -81,7 +83,7 @@ if (menuToggle && nav) {
   menuToggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('is-open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
-    menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    menuToggle.setAttribute('aria-label', isOpen ? menuLabelClose : menuLabelOpen);
   });
 
   document.addEventListener('keydown', (event) => {
@@ -90,7 +92,7 @@ if (menuToggle && nav) {
     }
     nav.classList.remove('is-open');
     menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Abrir menu');
+    menuToggle.setAttribute('aria-label', menuLabelOpen);
     menuToggle.focus();
   });
 }

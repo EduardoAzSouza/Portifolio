@@ -1,3 +1,5 @@
 .venv/
-docs/
+docs/*
+!docs/Curriculo - Eduardo Azeni de Souza.pdf
+!docs/carta-recomendacao.pdf
 assets-src/
